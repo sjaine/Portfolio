@@ -9,6 +9,17 @@ import final3 from '../../assets/img/instagram/final3.png';
 import final4 from '../../assets/img/instagram/final4.png';
 import final5 from '../../assets/img/instagram/final5.png';
 
+import competitor from '../../assets/img/instagram/competitor.svg';
+import currentUserFlow from '../../assets/img/instagram/currentUserFlow.svg';
+// import updatedUserFlow from '../../assets/img/instagram/updatedUserFlow.svg';
+import persona1 from '../../assets/img/instagram/persona1.svg';
+import persona2 from '../../assets/img/instagram/persona2.svg';
+import observation1 from '../../assets/img/instagram/observation1.svg';
+import observation2 from '../../assets/img/instagram/observation2.svg';
+import lowfi from '../../assets/img/instagram/lowfi.svg';
+import midfi from '../../assets/img/instagram/midfi.svg';
+
+
 function Instagram() {
     const scrollRef = useRef(null);
     const [isDragging, setIsDragging] = useState(false);
@@ -159,11 +170,11 @@ Hand-coded with ❤️ using React & Motion</div>
                     transition={{ type: "tween", stiffness: 150 }} className="observation_photo"
                 >
                     <div className="observation_container">
-                        <img src="/assets/img/instagram/observation1.svg" alt="observation 1" />
-                        <img src="/assets/img/instagram/observation2.svg" alt="observation 2" />
+                        <img src={observation1} alt="observation 1" />
+                        <img src={observation2} alt="observation 2" />
                     </div>
                     <div className="observation_container2">
-                        <img src="/assets/img/instagram/competitor.svg" alt="competitor analysis" />
+                        <img src={competitor} alt="competitor analysis" />
                     </div>
                 </motion.div>
             </div>
@@ -198,15 +209,15 @@ Hand-coded with ❤️ using React & Motion</div>
                     <motion.img initial={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     viewport={{ once:false }}
-                    transition={{ type: "tween", stiffness: 20 }} src="/assets/img/instagram/currentUserFlow.svg" alt="current user flow" />
+                    transition={{ type: "tween", stiffness: 20 }} src={currentUserFlow} alt="current user flow" />
                     <motion.img initial={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     viewport={{ once:false, stiffness: 20 }}
-                    transition={{ type: "tween" }} src="/assets/img/instagram/persona1.svg" alt="current user flow" />
+                    transition={{ type: "tween" }} src={persona1} alt="first persona" />
                     <motion.img initial={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     viewport={{ once:false, stiffness: 20 }}
-                    transition={{ type: "tween" }} src="/assets/img/instagram/persona2.svg" alt="current user flow" />
+                    transition={{ type: "tween" }} src={persona2} alt="second persona" />
                 </div>
             </div>
 
@@ -230,7 +241,7 @@ Hand-coded with ❤️ using React & Motion</div>
                     <motion.img initial={{ y: 50, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         viewport={{ once:false, amount: 0.1 }}
-                        transition={{ type: "tween", stiffness: 150 }} src="/assets/img/instagram/lowfi.svg" alt="low fidelity wireframe" />
+                        transition={{ type: "tween", stiffness: 150 }} src={lowfi} alt="low fidelity wireframe" />
 
                     {/* user feedback */}
                     <motion.table
@@ -274,7 +285,7 @@ Hand-coded with ❤️ using React & Motion</div>
                     <motion.img initial={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     viewport={{ once:false, amount: 0.1 }}
-                    transition={{ type: "tween", stiffness: 150 }} src="/assets/img/instagram/midfi.svg" alt="mid fidelity wireframe" />
+                    transition={{ type: "tween", stiffness: 150 }} src={midfi} alt="mid fidelity wireframe" />
                 </div>
             </div>
 

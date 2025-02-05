@@ -4,6 +4,8 @@ import * as motion from "motion/react-client"
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 
+import arrow from '../assets/img/icons/arrow-up-right.svg'
+
 function NavBar() {
     const location = useLocation();
     const [isContactClicked, setIsContactClicked] = useState(false);
@@ -79,9 +81,9 @@ function NavBar() {
           <div className={`contactInfo main color_text ${
               isContactClicked ? "contactInfoActive" : ""
             }`}>
-            <a href="/" target="_blank" rel="noopener noreferrer"><div>[01] Resume</div><img src="/assets/img/icons/arrow-up-right.svg" alt="arrow" /></a>
-            <a href="https://www.linkedin.com/in/jaineysshin/" target="_blank" rel="noopener noreferrer"><div>[02] LinkedIn</div><img src="/assets/img/icons/arrow-up-right.svg" alt="arrow" /></a>
-            <a href="https://github.com/sjaine" target="_blank" rel="noopener noreferrer"><div>[03] GitHub</div><img src="/assets/img/icons/arrow-up-right.svg" alt="arrow" /></a>
+            <a href="/" target="_blank" rel="noopener noreferrer"><div>[01] Resume</div><img src={arrow} alt="arrow" /></a>
+            <a href="https://www.linkedin.com/in/jaineysshin/" target="_blank" rel="noopener noreferrer"><div>[02] LinkedIn</div><img src={arrow} alt="arrow" /></a>
+            <a href="https://github.com/sjaine" target="_blank" rel="noopener noreferrer"><div>[03] GitHub</div><img src={arrow} alt="arrow" /></a>
           </div>
       {/* Tooltip */}
       <Tooltip id="my-tooltip" className="tooltip main" opacity={0.9} />

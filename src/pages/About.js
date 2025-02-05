@@ -1,6 +1,9 @@
 import React from 'react';
 import * as motion from "motion/react-client"
 
+import profileImg from '../assets/profile_img.jpeg'
+import hackville from '../assets/hackville.svg'
+
 function About() {
   return (
     <div className="about">
@@ -23,7 +26,7 @@ Hand-coded with ❤️ using React & Motion</div>
                 transition={{ type: "spring", stiffness: 80 }} 
                 className="about_left"
             >
-                <div className="about_profileImg"><img src="/assets/profile_img.jpeg" alt="Profile" /></div>
+                <div className="about_profileImg"><img src={profileImg} alt="Profile" /></div>
             </motion.div >
             <div className="about_right">
                 <motion.div 
@@ -55,7 +58,7 @@ Hand-coded with ❤️ using React & Motion</div>
                     <table className="about_content body">
                         <tr className="about_table">
                             <div>
-                                <td><img src="/assets/hackville.svg" alt="Hackville" className="company_icon" /></td>
+                                <td><img src={hackville} alt="Hackville" className="company_icon" /></td>
                                 <td><b>Hackville</b></td>
                                 <td>Co-President</td>
                             </div>
@@ -63,7 +66,7 @@ Hand-coded with ❤️ using React & Motion</div>
                         </tr>
                         <tr className="about_table">
                             <div>
-                                <td><img src="/assets/hackville.svg" alt="Hackville" className="company_icon" /></td>
+                                <td><img src={hackville} alt="Hackville" className="company_icon" /></td>
                                 <td><b>Hackville</b></td>
                                 <td>UI/UX Designer</td>
                             </div>
