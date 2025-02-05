@@ -8,6 +8,15 @@ import final2 from '../../assets/img/artbook/final2.png';
 import final3 from '../../assets/img/artbook/final3.png';
 import final4 from '../../assets/img/artbook/final4.png';
 import final5 from '../../assets/img/artbook/final5.png';
+import final6 from '../../assets/img/artbook/final6.png';
+import final7 from '../../assets/img/artbook/final7.png';
+import final8 from '../../assets/img/artbook/final8.png';
+import final9 from '../../assets/img/artbook/final9.png';
+import final10 from '../../assets/img/artbook/final10.png';
+import final11 from '../../assets/img/artbook/final11.png';
+import final12 from '../../assets/img/artbook/final12.png';
+import final13 from '../../assets/img/artbook/final13.png';
+import final14 from '../../assets/img/artbook/final14.png';
 
 function Artbook() {
     const scrollRef = useRef(null);
@@ -147,6 +156,33 @@ Hand-coded with ❤️ using React & Motion</div>
                     </div>
                     <div className="img_wrapper wrapper_laptop">
                         <img src={final5} alt="final5" onDragStart={(e) => e.preventDefault()} />
+                    </div>
+                    <div className="img_wrapper wrapper_laptop">
+                        <img src={final6} alt="final5" onDragStart={(e) => e.preventDefault()} />
+                    </div>
+                    <div className="img_wrapper wrapper_laptop">
+                        <img src={final7} alt="final5" onDragStart={(e) => e.preventDefault()} />
+                    </div>
+                    <div className="img_wrapper wrapper_laptop">
+                        <img src={final8} alt="final5" onDragStart={(e) => e.preventDefault()} />
+                    </div>
+                    <div className="img_wrapper wrapper_laptop">
+                        <img src={final9} alt="final5" onDragStart={(e) => e.preventDefault()} />
+                    </div>
+                    <div className="img_wrapper wrapper_laptop">
+                        <img src={final10} alt="final5" onDragStart={(e) => e.preventDefault()} />
+                    </div>
+                    <div className="img_wrapper wrapper_laptop">
+                        <img src={final11} alt="final5" onDragStart={(e) => e.preventDefault()} />
+                    </div>
+                    <div className="img_wrapper wrapper_laptop">
+                        <img src={final12} alt="final5" onDragStart={(e) => e.preventDefault()} />
+                    </div>
+                    <div className="img_wrapper wrapper_laptop">
+                        <img src={final13} alt="final5" onDragStart={(e) => e.preventDefault()} />
+                    </div>
+                    <div className="img_wrapper wrapper_laptop">
+                        <img src={final14} alt="final5" onDragStart={(e) => e.preventDefault()} />
                     </div>
                 </div>
             </div>

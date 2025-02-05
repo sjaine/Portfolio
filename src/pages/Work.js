@@ -9,9 +9,9 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import artbook from '../assets/img/artbook.png';
-import pawlert from '../assets/img/pawlart.png';
-import instagram from '../assets/img/instagram.png';
+import artbook from '../assets/img/trial1.png';
+import pawlert from '../assets/img/trial3.png';
+import instagram from '../assets/img/trial2.png';
 
 // import required modules
 import { Pagination, Navigation } from 'swiper/modules';
@@ -97,7 +97,7 @@ function Work() {
                                 <div className="main">{project.info}</div>
                             </div>
                             <div className="view_case main">view case study 👆</div>
-                            <img src={project.thumbnail} alt={`${project.title} thumbnail`} loading="lazy" />
+                            <img src={project.thumbnail} alt={`${project.title} thumbnail`} />
                         </motion.div>
 
                         <motion.div 
