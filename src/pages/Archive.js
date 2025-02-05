@@ -11,14 +11,21 @@ import '../index.css';
 // import required modules
 import { Pagination } from 'swiper/modules';
 
+import movienight from '../assets/img/movienight.png';
+import arborday from '../assets/img/arborday.gif';
+import book from '../assets/img/book.png';
+import movieposter from '../assets/img/movieposter.png';
+import movieticket from '../assets/img/movieticket.png';
+import watering from '../assets/img/watering.png';
+
 const projects = [
-    { id: 1, title: 'arbor day', thumbnail: "assets/img/arborday.gif" },
-    { id: 2, title: 'movie ticket', thumbnail: "/assets/img/movieticket.png" },
-    { id: 3, title: 'planting app', thumbnail: "/assets/img/watering.png" },
-    { id: 4, title: 'book redesign', thumbnail: "/assets/img/book.png" },
-    { id: 5, title: 'movie night', thumbnail: "/assets/img/movienight.png" },
-    { id: 6, title: 'movie poster', thumbnail: "/assets/img/movieposter.png" }
-  ];
+  { id: 1, title: 'arbor day', thumbnail: arborday },
+  { id: 2, title: 'movie ticket', thumbnail: movieticket },
+  { id: 3, title: 'planting app', thumbnail: watering },
+  { id: 4, title: 'book redesign', thumbnail: book },
+  { id: 5, title: 'movie night', thumbnail: movienight },
+  { id: 6, title: 'movie poster', thumbnail: movieposter }
+];
 
 function Archive() {
   return (
