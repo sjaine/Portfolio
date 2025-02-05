@@ -1,6 +1,8 @@
 import React, { useRef, useState } from 'react';
 import * as motion from "motion/react-client"
 
+import instagram from '../../assets/img/instagram.png'
+
 import final1 from '../../assets/img/instagram/final1.png';
 import final2 from '../../assets/img/instagram/final2.png';
 import final3 from '../../assets/img/instagram/final3.png';
@@ -54,7 +56,7 @@ Hand-coded with ❤️ using React & Motion</div>
                 layout
                 transition={{ type: "spring", stiffness: 80 }}
             >
-                <img src="/assets/img/instagram.png" alt="project thumbnail" />
+                <img src={instagram} alt="project thumbnail" />
             </motion.div>
 
             {/* intro */}

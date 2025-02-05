@@ -1,6 +1,8 @@
 import React, { useRef, useState } from 'react';
 import * as motion from "motion/react-client"
 
+import pawlert from '../../assets/img/pawlart.png';
+
 import final1 from '../../assets/img/pawlert/First.png';
 import final2 from '../../assets/img/pawlert/Main.png';
 import final3 from '../../assets/img/pawlert/Main2.png';
@@ -57,7 +59,7 @@ Hand-coded with ❤️ using React & Motion</div>
                 style={{ y: 100, opacity: 0 }}
                 transition={{ type: "spring", stiffness: 80 }}
             >
-                <img src="/assets/img/pawlart.png" alt="project thumbnail" />
+                <img src={pawlert} alt="project thumbnail" />
             </motion.div>
 
             {/* intro */}

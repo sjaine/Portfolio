@@ -188,23 +188,23 @@ section > div {
 }
 
 .homeNav {
-  background-image: url('/public/assets/navbar/home.svg');
+  background-image: url('/src/assets/navbar/home.svg');
 }
 
 .aboutNav {
-  background-image: url('/public/assets/navbar/person.svg');
+  background-image: url('/src/assets/navbar/person.svg');
 }
 
 .workNav {
-  background-image: url('/public/assets/navbar/folder.svg');
+  background-image: url('/src/assets/navbar/folder.svg');
 }
 
 .archiveNav {
-  background-image: url('/public/assets/navbar/archive.svg');
+  background-image: url('/src/assets/navbar/archive.svg');
 }
 
 .contactNav {
-  background-image: url('/public/assets/navbar/contact.svg');
+  background-image: url('/src/assets/navbar/contact.svg');
 }
 
 .common {
@@ -222,23 +222,23 @@ section > div {
 }
 
 .common > a:first-child:hover .homeNav, .homeActive{
-  background-image: url('/public/assets/navbar/hover_home.svg');
+  background-image: url('/src/assets/navbar/hover_home.svg');
 }
 
 .common > a:nth-child(2):hover .aboutNav, .aboutActive{
-  content: url('/public/assets/navbar/hover_person.svg');
+  content: url('/src/assets/navbar/hover_person.svg');
 }
 
 .common > a:nth-child(3):hover .workNav, .workActive{
-  content: url('/public/assets/navbar/hover_folder.svg');
+  content: url('/src/assets/navbar/hover_folder.svg');
 }
 
 .common > a:nth-child(4):hover .archiveNav, .archiveActive{
-  content: url('/public/assets/navbar/hover_archive.svg');
+  content: url('/src/assets/navbar/hover_archive.svg');
 }
 
 .contact:hover > .contactNav, .contactActive {
-  content: url('/public/assets/navbar/hover_contact.svg');
+  content: url('/src/assets/navbar/hover_contact.svg');
 }
 
 .navBarActive {
@@ -1455,6 +1455,11 @@ section > div {
 
   .view_case::before {
     content: "👆";
+  }
+
+  .view_case:hover {
+    background-color: transparent;
+    border: 0;
   }
 
 

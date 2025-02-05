@@ -1,6 +1,8 @@
 import React, { useRef, useState } from 'react';
 import * as motion from "motion/react-client"
 
+import artbook from '../../assets/img/artbook.png';
+
 import final1 from '../../assets/img/artbook/final1.png';
 import final2 from '../../assets/img/artbook/final2.png';
 import final3 from '../../assets/img/artbook/final3.png';
@@ -56,7 +58,7 @@ Hand-coded with ❤️ using React & Motion</div>
                 style={{ y: 100, opacity: 0 }}
                 transition={{ type: "spring", stiffness: 80 }}
             >
-                <img src="/assets/img/artbook.png" alt="project thumbnail" />
+                <img src={artbook} alt="project thumbnail" />
             </motion.div>
 
             {/* intro */}
