@@ -11,7 +11,7 @@ function Home() {
         <div className="link main color_orange link_home">
             <div className="gotoHome">👋 sjaine.me</div>
             <div className="copyright_home main color_orange">© 2025 Yoonsoo Jaine Shin <br />
-    Hand-coded with ❤️ using React</div>
+    Hand-coded with ❤️ using React & Motion</div>
         </div>
         {/* sections */}
         <motion.div 

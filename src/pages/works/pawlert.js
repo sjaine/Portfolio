@@ -42,7 +42,7 @@ function Pawlert() {
         <div className="link main color_orange">
             <div className="gotoHome">👋 sjaine.me/work/pawlert</div>
             <div className="copyright main color_orange">© 2025 Yoonsoo Jaine Shin <br />
-Hand-coded with ❤️ using React</div>
+Hand-coded with ❤️ using React & Motion</div>
         </div>
         {/* sections */}
         <div className="project_container">

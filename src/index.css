@@ -281,7 +281,7 @@ section > div {
 .link {
   position: fixed;
   padding: 0 45px;
-  top: 35px;
+  top: 45px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -295,7 +295,7 @@ section > div {
 .copyright_home {
   position: fixed;
   top: 45px;
-  left: 40%;
+  left: 37.5%;
   text-align: right;
   transform: translate(-40%, 0);
   font-size: 15px;
@@ -508,11 +508,6 @@ section > div {
 
 .table_mob {
   display: none;
-}
-
-.link {
-  padding: 0 20px;
-  top: 25px;
 }
 
 .link_home {
@@ -1173,6 +1168,11 @@ section > div {
     margin-top: 15px;
     gap: 10px;
     font-size: 15px;
+  }
+
+  .link {
+    padding: 0 20px;
+    top: 25px;
   }
 
   .home {
