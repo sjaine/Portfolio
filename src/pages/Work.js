@@ -15,7 +15,7 @@ import { Pagination, Navigation } from 'swiper/modules';
 const projects = [
     { id: 'instagram', title: "Instagram", thumbnail: "/assets/img/instagram.png", role: "UI/UX Designer", start: "from September 2023", end: "to December 2023", team: "Alone", tools: ["Visual Studio Code", "HTML, CSS", "Figma", "REST APIs"], info: "Capture, Create & Share What You Love! Improving Instagram's Accessibility for visual impairs.", },
     { id: 'artbook', title: "ArtBook", thumbnail: "/assets/img/artbook.png", role: "front-end developer", start: "from September 2024", end: "to December 2024", team: "Nayeong Cho, UI/UX Designer", tools: ["Visual Studio Code", "React", "Figma", "MongoDB", "REST APIs",], info: "Explore the MET's collection with ease, one artwork at a time!", },
-    { id: 'pawlert', title: "Pawlert", thumbnail: "/assets/img/pawlart.png", role: "front-end developer", start: "from September 2024", end: "to December 2024", team: "Nayeong Cho, UI/UX Designer", tools: ["Visual Studio Code", "React", "Figma", "MongoDB", "REST APIs"], info: "(*Award Winning Project) Keep your dog cool and safe! Pawlert watches over them in real-time!", },
+    { id: 'pawlert', title: "Pawlert", thumbnail: "/assets/img/pawlart.png", role: "front-end developer", start: "from September 2024", end: "to December 2024", team: "Nayeong Cho, UI/UX Designer", tools: ["Visual Studio Code", "React", "Figma", "MongoDB", "REST APIs"], info: "(🏆Award Winning Project) Keep your dog cool and safe! Pawlert watches over them in real-time!", },
   ];
 
 function Work() {
