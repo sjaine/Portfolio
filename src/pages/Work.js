@@ -1,5 +1,5 @@
 // Import Swiper React components
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useNavigate } from 'react-router-dom'; // React Router
 import * as motion from "motion/react-client"
@@ -23,7 +23,24 @@ const projects = [
   ];
 
 function Work() {
-        const navigate = useNavigate();
+    const navigate = useNavigate();
+
+    const handleScroll = useCallback(() => {
+        const scrollPosition = window.innerHeight + document.documentElement.scrollTop;
+        const documentHeight = document.documentElement.offsetHeight;
+    
+        if (scrollPosition >= documentHeight - 10) {
+          navigate('/about');
+        }
+      }, [navigate]);
+
+      useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+    
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, [handleScroll]);
 
     const handleThumbnailClick = (project) => {
         navigate(`/${project.id}`, { state: { project } }); // Pass project data

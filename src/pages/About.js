@@ -1,10 +1,31 @@
-import React from 'react';
+import { useEffect, useCallback } from "react";
 import * as motion from "motion/react-client"
 
 import profileImg from '../assets/profile_img.jpeg'
 import hackville from '../assets/hackville.svg'
 
+import { useNavigate } from 'react-router-dom'; // React Router
+
 function About() {
+    const navigate = useNavigate();
+
+    const handleScroll = useCallback(() => {
+        const scrollPosition = window.innerHeight + document.documentElement.scrollTop;
+        const documentHeight = document.documentElement.offsetHeight;
+    
+        if (scrollPosition >= documentHeight - 10) {
+          navigate('/archive');
+        }
+      }, [navigate]);
+
+      useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+    
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, [handleScroll]);
+
     return (
     <div className="about">
         {/* header */}

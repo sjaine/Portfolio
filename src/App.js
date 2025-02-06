@@ -1,4 +1,5 @@
-import { Route, Routes } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import Instagram from './pages/works/instagram.js';
 import Artbook from './pages/works/artbook.js';
 import Pawlert from './pages/works/pawlert.js';
@@ -14,11 +15,23 @@ import Archive from './pages/Archive';
 
 import NavBar from './components/NavBar';
 
+function ScrollToTop() {
+  const location = useLocation();
+
+  useEffect(() => {
+    // This will scroll to the top every time the route changes
+    window.scrollTo(0, 0);
+  }, [location]); // Depend on location to trigger when the route changes
+
+  return null;
+}
+
 function App() {
   return (
     <>
     <LoadingProvider>
       <LoadingScreen />
+      <ScrollToTop />
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />

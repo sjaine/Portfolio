@@ -1,9 +1,29 @@
-import React from 'react';
+import React, { useEffect, useCallback } from 'react';
 import * as motion from "motion/react-client"
 import { useLoading } from "../components/LoadingContext";
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
     const { loading } = useLoading();
+
+    const navigate = useNavigate();
+
+    const handleScroll = useCallback(() => {
+        const scrollPosition = window.innerHeight + document.documentElement.scrollTop;
+        const documentHeight = document.documentElement.offsetHeight;
+    
+        if (scrollPosition >= documentHeight - 10) {
+          navigate('/work');
+        }
+      }, [navigate]);
+
+      useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+    
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, [handleScroll]);
 
     return (
     <div className="home">
