@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import * as motion from "motion/react-client"
 import { useLoading } from "../components/LoadingContext";
 import { useNavigate } from 'react-router-dom';
@@ -7,23 +7,32 @@ function Home() {
     const { loading } = useLoading();
 
     const navigate = useNavigate();
+    const [timeoutId, setTimeoutId] = useState(null);
 
     const handleScroll = useCallback(() => {
         const scrollPosition = window.innerHeight + document.documentElement.scrollTop;
         const documentHeight = document.documentElement.offsetHeight;
     
         if (scrollPosition >= documentHeight - 10) {
-          navigate('/work');
+          // Debounce the navigation by clearing the previous timeout and setting a new one
+          if (timeoutId) clearTimeout(timeoutId);
+    
+          const newTimeoutId = setTimeout(() => {
+            navigate('/work');
+          }, 800);  // Adjust 300ms for your desired delay between triggers
+    
+          setTimeoutId(newTimeoutId);
         }
-      }, [navigate]);
-
+      }, [navigate, timeoutId]);
+    
       useEffect(() => {
         window.addEventListener('scroll', handleScroll);
     
         return () => {
           window.removeEventListener('scroll', handleScroll);
+          if (timeoutId) clearTimeout(timeoutId); // Clean up timeout when unmounting
         };
-      }, [handleScroll]);
+      }, [handleScroll, timeoutId]);
 
     return (
     <div className="home">

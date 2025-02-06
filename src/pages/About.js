@@ -1,4 +1,4 @@
-import { useEffect, useCallback } from "react";
+import { useEffect, useState, useCallback } from "react";
 import * as motion from "motion/react-client"
 
 import profileImg from '../assets/profile_img.jpeg'
@@ -8,23 +8,32 @@ import { useNavigate } from 'react-router-dom'; // React Router
 
 function About() {
     const navigate = useNavigate();
+    const [timeoutId, setTimeoutId] = useState(null);
 
     const handleScroll = useCallback(() => {
         const scrollPosition = window.innerHeight + document.documentElement.scrollTop;
         const documentHeight = document.documentElement.offsetHeight;
     
         if (scrollPosition >= documentHeight - 10) {
-          navigate('/archive');
-        }
-      }, [navigate]);
+          // Debounce the navigation by clearing the previous timeout and setting a new one
+          if (timeoutId) clearTimeout(timeoutId);
 
+          const newTimeoutId = setTimeout(() => {
+            navigate('/archive');
+          }, 800);  // Adjust 300ms for your desired delay between triggers
+    
+          setTimeoutId(newTimeoutId);
+        }
+      }, [navigate, timeoutId]);
+    
       useEffect(() => {
         window.addEventListener('scroll', handleScroll);
     
         return () => {
           window.removeEventListener('scroll', handleScroll);
+          if (timeoutId) clearTimeout(timeoutId); // Clean up timeout when unmounting
         };
-      }, [handleScroll]);
+      }, [handleScroll, timeoutId]);
 
     return (
     <div className="about">

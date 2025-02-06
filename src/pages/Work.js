@@ -24,23 +24,32 @@ const projects = [
 
 function Work() {
     const navigate = useNavigate();
+    const [timeoutId, setTimeoutId] = useState(null);
 
     const handleScroll = useCallback(() => {
         const scrollPosition = window.innerHeight + document.documentElement.scrollTop;
         const documentHeight = document.documentElement.offsetHeight;
     
         if (scrollPosition >= documentHeight - 10) {
-          navigate('/about');
+          // Debounce the navigation by clearing the previous timeout and setting a new one
+          if (timeoutId) clearTimeout(timeoutId);
+    
+          const newTimeoutId = setTimeout(() => {
+            navigate('/about');
+          }, 800);  // Adjust 300ms for your desired delay between triggers
+    
+          setTimeoutId(newTimeoutId);
         }
-      }, [navigate]);
-
+      }, [navigate, timeoutId]);
+    
       useEffect(() => {
         window.addEventListener('scroll', handleScroll);
     
         return () => {
           window.removeEventListener('scroll', handleScroll);
+          if (timeoutId) clearTimeout(timeoutId); // Clean up timeout when unmounting
         };
-      }, [handleScroll]);
+      }, [handleScroll, timeoutId]);
 
     const handleThumbnailClick = (project) => {
         navigate(`/${project.id}`, { state: { project } }); // Pass project data

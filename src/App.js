@@ -20,7 +20,7 @@ function ScrollToTop() {
 
   useEffect(() => {
     // This will scroll to the top every time the route changes
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0 });
   }, [location]); // Depend on location to trigger when the route changes
 
   return null;
