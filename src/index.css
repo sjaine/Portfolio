@@ -435,7 +435,7 @@ section > div {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
   overflow-y: scroll;
 }
 
@@ -534,7 +534,7 @@ section > div {
 
 /* About  */
 .about, .work {
-  margin-bottom: 150px;
+  margin-bottom: 100px;
 }
 
 .about, .work, .archive {
