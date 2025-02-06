@@ -143,7 +143,7 @@ function Home() {
             // Animate the component when its layout changes:
             layout
             // Style now supports indepedent transforms:
-            style={{ y: 150 }}
+            style={{ y: 130 }}
             transition={{ type: "spring", stiffness: 100 }}
             className="home_box bc_blue"
         >
@@ -167,29 +167,46 @@ function Home() {
         </motion.div >
         </div>
 
-        <table className="number_table table_mob main">
+        <motion.table 
+        animate={loading ? { } : { y: 0 }}
+        // Fade in when the element enters the viewport:
+        whileInView={{ opacity: 1 }}
+        // Animate the component when its layout changes:
+        layout
+        // Style now supports indepedent transforms:
+        style={{ y: 80 }}
+        transition={{ type: "spring", stiffness: 150 }}
+        className="number_table table_mob main">
                 <div className="table_line"></div>
                 <tr>
                     <td className="color_orange">1</td>
-                    <td>&emsp;&emsp;return(</td>
+                    <td>import <span>Jaine</span> from sjaine.me;</td>
                 </tr>
                 <tr>
                     <td className="color_orange">2</td>
-                    <td>&emsp;&emsp;&emsp;&emsp;&lt;div&gt;Yoonsoo <span>Jaine</span> Shin&lt;/div&gt;</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td className="color_orange">3</td>
-                    <td>&emsp;&emsp;&emsp;&emsp;&lt;div&gt;<span>UI/UX Designer</span>&lt;/div&gt;</td>
+                    <td>return(</td>
                 </tr>
                 <tr>
                     <td className="color_orange">4</td>
-                    <td>&emsp;&emsp;&emsp;&emsp;&lt;div&gt;<span>Front-end Developer</span>&lt;/div&gt;</td>
+                    <td>&emsp;&emsp;&lt;div&gt;Yoonsoo <span>Jaine</span> Shin&lt;/div&gt;</td>
                 </tr>
                 <tr>
                     <td className="color_orange">5</td>
-                    <td>&emsp;&emsp;);</td>
+                    <td>&emsp;&emsp;&lt;div&gt;<span>UI/UX Designer</span>&lt;/div&gt;</td>
                 </tr>
-            </table>
+                <tr>
+                    <td className="color_orange">6</td>
+                    <td>&emsp;&emsp;&lt;div&gt;<span>Front-end Developer</span>&lt;/div&gt;</td>
+                </tr>
+                <tr>
+                    <td className="color_orange">7</td>
+                    <td>);</td>
+                </tr>
+            </motion.table>
     </div>
     );
 }

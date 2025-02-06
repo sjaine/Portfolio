@@ -82,7 +82,7 @@ function Work() {
                             transition={{ 
                                 duration: 1,
                                 type: "spring", 
-                                delay: index * 0.2 // Add a delay based on the index
+                                delay: index * 0.1 // Add a delay based on the index
                             }} 
                             className="work_thumb" 
                             onClick={() => handleThumbnailClick(project)} // Add click handler
@@ -111,9 +111,9 @@ function Work() {
                 {projects.map((project, index) => (
                     <SwiperSlide key={index} className="work_container">
                         <motion.div 
-                            animate={index === 0 ? { y: 0 } : {}}
-                            style={index === 0 ? { y: 80, cursor: 'pointer' } : { cursor: 'pointer' }}
-                            transition={index === 0 ? { type: "spring", stiffness: 80 } : {}} 
+                            animate={{ y: 0 }}
+                            style={{ y: 80, cursor: 'pointer' }}
+                            transition={{ type: "spring", stiffness: 80 }} 
                             className="work_thumb" 
                             onClick={() => handleThumbnailClick(project)} // Add click handler
                         >
@@ -127,9 +127,9 @@ function Work() {
                         </motion.div>
 
                         <motion.div 
-                            animate={index === 0 ? { y: 0 } : {}}
-                            style={index === 0 ? { y: 140 } : {}}
-                            transition={index === 0 ? { type: "spring", stiffness: 100 } : {}}  
+                            animate={{ y: 0 }}
+                            style={{ y: 140 }}
+                            transition={{ type: "spring", stiffness: 100 }}  
                             className="work_preview"
                         >
                             <div className="work_folderName color_blue body"><b>📁 {project.title}/</b></div>

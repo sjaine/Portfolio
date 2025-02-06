@@ -1112,14 +1112,19 @@ section > div {
 /* Medium screens */
 @media (max-width: 1024px) {
   .NavBar {
+    top: auto;
     bottom: 20px;
-    padding: 6px 45px;
+    padding: 8px 45px;
     gap: 30px;
     transform: translate(-50%, 0%);
   }
 
   .navBarActive {
-    padding: 6px 45px 180px 45px;
+    padding: 180px 45px 8px 45px;
+  }
+
+  .contactInfo {
+    top: 45%;
   }
 
   .common {
@@ -1357,7 +1362,7 @@ section > div {
   }
 
   .table_mob {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .copyright_home {
@@ -1383,9 +1388,13 @@ section > div {
     justify-content: flex-start;
   }
 
+  .home, .about, .work {
+    margin-bottom: 50px;
+  }
+
   .home_right {
     margin-top: 30px;
-    height: 65vh;
+    height: 55vh;
   }
 
   .NavBar {
