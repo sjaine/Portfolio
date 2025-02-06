@@ -10,8 +10,6 @@ function Home() {
         {/* header */}
         <div className="link main color_orange link_home">
             <div className="gotoHome">👋 sjaine.me</div>
-            <div className="copyright_home main color_orange">© 2025 Yoonsoo Jaine Shin <br />
-    Hand-coded with ❤️ using React & Motion</div>
         </div>
         {/* sections */}
         <motion.div 
@@ -104,6 +102,8 @@ function Home() {
                     <td></td>
                 </tr>
             </table>
+            <div className="copyright_home main color_orange">© 2025 Yoonsoo Jaine Shin <br />
+    Hand-coded with ❤️ using React & Motion</div>
         </motion.div >
 
         <div className="home_right">

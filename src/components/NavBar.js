@@ -5,10 +5,12 @@ import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 
 import arrow from '../assets/img/icons/arrow-up-right.svg'
+import { useLoading } from "./LoadingContext"
 
 function NavBar() {
     const location = useLocation();
     const [isContactClicked, setIsContactClicked] = useState(false);
+    const { loading } = useLoading();
 
     const isActive = (href) => {
       return location.pathname === href;
@@ -20,6 +22,13 @@ function NavBar() {
 
   return (
     <motion.div
+    animate={loading ? { } : { y: 0 }}
+    // Fade in when the element enters the viewport:
+    whileInView={{ opacity: 1 }}
+    initial={{x: "-50%"}}
+    // Style now supports indepedent transforms:
+    style={{ y: 15, opacity: 0 }}
+    transition={{ type: "spring", stiffness: 50 }}
     className={`NavBar ${
       isContactClicked ? "navBarActive" : ""
     }`}
@@ -31,37 +40,10 @@ function NavBar() {
           data-tooltip-content="Home"
           data-tooltip-place="top"
         >
-          <motion.div 
-          animate={{ y: 0 }}
-          // Fade in when the element enters the viewport:
-          whileInView={{ opacity: 1 }}
-          // Animate the component when its layout changes:
-          layout
-          // Style now supports indepedent transforms:
-          style={{ y: -15, opacity: 0 }}
-          transition={{ type: "spring", stiffness: 100, delay: 0.1 }}
+          <div 
           className={`nav_content homeNav ${
               isActive("/") ? "homeActive" : ""
-            }`}></motion.div>
-        </a>
-        <a
-          href="/about"
-          data-tooltip-id="my-tooltip"
-          data-tooltip-content="About"
-          data-tooltip-place="top"
-        >
-          <motion.div 
-          animate={{ y: 0 }}
-          // Fade in when the element enters the viewport:
-          whileInView={{ opacity: 1 }}
-          // Animate the component when its layout changes:
-          layout
-          // Style now supports indepedent transforms:
-          style={{ y: -15, opacity: 0 }}
-          transition={{ type: "spring", stiffness: 100, delay: 0.2 }}
-          className={`nav_content aboutNav ${
-              isActive("/about") ? "aboutActive" : ""
-            }`}></motion.div>
+            }`}></div>
         </a>
         <a
           href="/work"
@@ -69,18 +51,21 @@ function NavBar() {
           data-tooltip-content="Work"
           data-tooltip-place="top"
         >
-          <motion.div 
-          animate={{ y: 0 }}
-          // Fade in when the element enters the viewport:
-          whileInView={{ opacity: 1 }}
-          // Animate the component when its layout changes:
-          layout
-          // Style now supports indepedent transforms:
-          style={{ y: -15, opacity: 0 }}
-          transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
+          <div 
           className={`nav_content workNav ${
               isActive("/work") ? "workActive" : ""
-            }`}></motion.div>
+            }`}></div>
+        </a>
+        <a
+          href="/about"
+          data-tooltip-id="my-tooltip"
+          data-tooltip-content="About"
+          data-tooltip-place="top"
+        >
+          <div 
+          className={`nav_content aboutNav ${
+              isActive("/about") ? "aboutActive" : ""
+            }`}></div>
         </a>
         <a
           href="/archive"
@@ -88,18 +73,10 @@ function NavBar() {
           data-tooltip-content="Archive"
           data-tooltip-place="top"
         >
-          <motion.div 
-          animate={{ y: 0 }}
-          // Fade in when the element enters the viewport:
-          whileInView={{ opacity: 1 }}
-          // Animate the component when its layout changes:
-          layout
-          // Style now supports indepedent transforms:
-          style={{ y: -15, opacity: 0 }}
-          transition={{ type: "spring", stiffness: 100, delay: 0.4 }}
+          <div 
           className={`nav_content archiveNav ${
               isActive("/archive") ? "archiveActive" : ""
-            }`}></motion.div>
+            }`}></div>
         </a>
       </div>
       <div
@@ -109,18 +86,10 @@ function NavBar() {
         data-tooltip-place="top"
         onClick={handleContactClick}
       >
-        <motion.div 
-        animate={{ y: 0 }}
-        // Fade in when the element enters the viewport:
-        whileInView={{ opacity: 1 }}
-        // Animate the component when its layout changes:
-        layout
-        // Style now supports indepedent transforms:
-        style={{ y: -15, opacity: 0 }}
-        transition={{ type: "spring", stiffness: 100, delay: 0.5 }}
+        <div 
         className={`nav_content contactNav ${
             isContactClicked ? "contactActive" : ""
-          }`}></motion.div>
+          }`}></div>
       </div>
 
           <div className={`contactInfo main color_text ${

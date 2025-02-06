@@ -23,7 +23,7 @@ const projects = [
   ];
 
 function Work() {
-    const navigate = useNavigate(); // Hook for navigation
+        const navigate = useNavigate();
 
     const handleThumbnailClick = (project) => {
         navigate(`/${project.id}`, { state: { project } }); // Pass project data

@@ -5,13 +5,13 @@ import profileImg from '../assets/profile_img.jpeg'
 import hackville from '../assets/hackville.svg'
 
 function About() {
-  return (
+    return (
     <div className="about">
         {/* header */}
         <div className="link main color_orange">
             <div className="gotoHome">👋 sjaine.me/about</div>
             <div className="copyright main color_orange">© 2025 Yoonsoo Jaine Shin <br />
-Hand-coded with ❤️ using React & Motion</div>
+    Hand-coded with ❤️ using React & Motion</div>
         </div>
         {/* sections */}
         <div className="about_container">
@@ -100,7 +100,7 @@ Hand-coded with ❤️ using React & Motion</div>
             </div>
         </div>
     </div>
-  );
+    );
 }
 
 export default About;
