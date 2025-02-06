@@ -177,6 +177,36 @@ section > div {
   transition: padding 0.3s;
 }
 
+.externalNav {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  gap: 70px;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+
+.externalNav_content {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  font-size: 25px;
+  border-radius: 33px;
+  border: 1px solid #FFF;
+  background: rgba(255, 255, 255, 0.80);
+  box-shadow: 0px 4px 4px 0px rgba(61, 61, 61, 0.10);
+  backdrop-filter: blur(2px);
+  justify-content: center;
+  align-items: center;
+  color: #5F6368;
+}
+
+.externalNav_content > .fa-arrow-up-right-from-square {
+  font-size: 20px;
+}
+
 .nav_content {
   width: 24px;
   height: 24px;
@@ -224,12 +254,12 @@ section > div {
   background-image: url('/src/assets/navbar/hover_home.svg');
 }
 
-.common > a:nth-child(2):hover .aboutNav, .aboutActive{
-  content: url('/src/assets/navbar/hover_person.svg');
+.common > a:nth-child(2):hover .workNav, .workActive{
+  content: url('/src/assets/navbar/hover_folder.svg');
 }
 
-.common > a:nth-child(3):hover .workNav, .workActive{
-  content: url('/src/assets/navbar/hover_folder.svg');
+.common > a:nth-child(3):hover .aboutNav, .aboutActive{
+  content: url('/src/assets/navbar/hover_person.svg');
 }
 
 .common > a:nth-child(4):hover .archiveNav, .archiveActive{
@@ -425,8 +455,6 @@ section > div {
   font-weight: bold;
   color: #007bff;
 }
-
-
 
 /* home page */
 .home {
@@ -759,7 +787,7 @@ section > div {
   transition: all 0.2s;
 }
 
-.view_case:hover {
+.work_thumb:hover .view_case {
   background-color: white;
   color: black;
 }

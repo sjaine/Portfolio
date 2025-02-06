@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import * as motion from "motion/react-client"
+import ExternalNav from '../../components/ExternalNav';
 
 import artbook from '../../assets/img/artbook.png';
 
@@ -47,6 +48,8 @@ function Artbook() {
       };
 
   return (
+    <>
+    <ExternalNav gitHub="https://github.com/sjaine/ArtBook" liveSite="https://artbookproject.netlify.app/" />
     <div className="project">
         {/* header */}
         <div className="link main color_orange">
@@ -211,6 +214,7 @@ Hand-coded with ❤️ using React & Motion</div>
             </motion.div>
         </div>
     </div>
+    </>
   );
 }
 
