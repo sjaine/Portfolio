@@ -78,7 +78,6 @@ function Instagram() {
                     className="project_intro"
                     initial={{ y: 100, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
-                    viewport={{ once:false, amount: 0.3 }}
                     transition={{ type: "spring", stiffness: 80 }}
                 >
                     <div className="title color_blue" >Instagram.</div>
@@ -95,7 +94,6 @@ function Instagram() {
                     className="body project_overview"
                     initial={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
-                    viewport={{ once:false, amount: 0.3 }}
                     transition={{ type: "tween", stiffness: 150 }}
                 >
                     <div className="overview_container line_height">
@@ -135,7 +133,6 @@ function Instagram() {
                     className="project_problem"
                     initial={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
-                    viewport={{ once:false, amount: 0.3 }}
                     transition={{ type: "tween", stiffness: 150 }}
                 >
                     <div className="main color_text">&lt;problem statement&gt;</div>
@@ -153,7 +150,6 @@ function Instagram() {
                     <motion.div
                         initial={{ y: 50, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
-                        viewport={{ once:false, amount: 0.3 }}
                         transition={{ type: "tween", stiffness: 150 }}
                     >
                         <div className="body_title main color_text">📁 ../discover/observation</div>
@@ -169,7 +165,6 @@ function Instagram() {
                     <motion.div
                         initial={{ y: 50, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
-                        viewport={{ once:false, amount: 0.1 }}
                         transition={{ type: "tween", stiffness: 150 }} className="observation_photo"
                     >
                         <div className="observation_container">
@@ -191,7 +186,6 @@ function Instagram() {
                     <motion.div
                         initial={{ y: 50, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
-                        viewport={{ once:false }}
                         transition={{ type: "tween", stiffness: 150 }}
                     >
                         <div className="body_title main color_text">📁 ../define/user flow</div>
@@ -211,16 +205,13 @@ function Instagram() {
                     <div className="body_imgs"> 
                         <motion.img initial={{ y: 50, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
-                        viewport={{ once:false }}
                         transition={{ type: "tween", stiffness: 20 }} src={currentUserFlow} alt="current user flow" />
                         <motion.img initial={{ y: 50, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
-                        viewport={{ once:false, stiffness: 20 }}
-                        transition={{ type: "tween" }} src={persona1} alt="first persona" />
+                        transition={{ type: "tween", stiffness: 20 }} src={persona1} alt="first persona" />
                         <motion.img initial={{ y: 50, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
-                        viewport={{ once:false, stiffness: 20 }}
-                        transition={{ type: "tween" }} src={persona2} alt="second persona" />
+                        transition={{ type: "tween", stiffness: 20 }} src={persona2} alt="second persona" />
                     </div>
                 </div>
 
@@ -229,7 +220,6 @@ function Instagram() {
                     <motion.div
                         initial={{ y: 50, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
-                        viewport={{ once:false }}
                         transition={{ type: "tween", stiffness: 150 }}
                     >
                         <div className="body_title main color_text">📁 ../develop/creation</div>
@@ -243,7 +233,6 @@ function Instagram() {
                     <div className="body_imgs"> 
                         <motion.img initial={{ y: 50, opacity: 0 }}
                             whileInView={{ y: 0, opacity: 1 }}
-                            viewport={{ once:false, amount: 0.1 }}
                             transition={{ type: "tween", stiffness: 150 }} src={lowfi} alt="low fidelity wireframe" />
 
                         {/* user feedback */}
@@ -251,7 +240,6 @@ function Instagram() {
                             className="project_table line_height"
                             initial={{ y: 50, opacity: 0 }}
                             whileInView={{ y: 0, opacity: 1 }}
-                            viewport={{ once:false, amount: 0.3 }}
                             transition={{ type: "tween", stiffness: 150 }}
                         >
                             <tr>
@@ -287,7 +275,6 @@ function Instagram() {
 
                         <motion.img initial={{ y: 50, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
-                        viewport={{ once:false, amount: 0.1 }}
                         transition={{ type: "tween", stiffness: 150 }} src={midfi} alt="mid fidelity wireframe" />
                     </div>
                 </div>
@@ -330,7 +317,6 @@ function Instagram() {
                         <motion.div
                             initial={{ y: 50, opacity: 0 }}
                             whileInView={{ y: 0, opacity: 1 }}
-                            viewport={{ once:false, amount: 0.3 }}
                             transition={{ type: "tween", stiffness: 150 }} 
                             className="deliver_box line_height"
                         >
@@ -346,7 +332,6 @@ function Instagram() {
                         <motion.div
                             initial={{ y: 50, opacity: 0 }}
                             whileInView={{ y: 0, opacity: 1 }}
-                            viewport={{ once:false, amount: 0.3 }}
                             transition={{ type: "tween", stiffness: 150 }} 
                             className="deliver_box line_height"
                         >
@@ -362,7 +347,6 @@ function Instagram() {
                         <motion.div
                             initial={{ y: 50, opacity: 0 }}
                             whileInView={{ y: 0, opacity: 1 }}
-                            viewport={{ once:false, amount: 0.3 }}
                             transition={{ type: "tween", stiffness: 150 }} 
                             className="deliver_box line_height"
                         >
@@ -379,7 +363,6 @@ function Instagram() {
                         <motion.div
                             initial={{ y: 50, opacity: 0 }}
                             whileInView={{ y: 0, opacity: 1 }}
-                            viewport={{ once:false, amount: 0.3 }}
                             transition={{ type: "tween", stiffness: 150 }} 
                             className="deliver_box line_height"
                         >
@@ -400,7 +383,6 @@ function Instagram() {
                     className="project_body"
                     initial={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
-                    viewport={{ once:false, amount: 0.3 }}
                     transition={{ type: "tween", stiffness: 150 }}
                 >
                     <div className="body_title main color_text">📁 ../reflection/takeaways</div>

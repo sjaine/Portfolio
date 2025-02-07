@@ -70,7 +70,6 @@ function Pawlert() {
                     className="project_intro"
                     initial={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
-                    viewport={{ once:false, amount: 0.3 }}
                     transition={{ type: "tween", stiffness: 150 }}
                 >
                     <div className="title color_blue" >Pawlert.</div>
@@ -86,7 +85,6 @@ function Pawlert() {
                     className="body project_overview"
                     initial={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
-                    viewport={{ once:false, amount: 0.3 }}
                     transition={{ type: "tween", stiffness: 150 }}
                 >
                     <div className="overview_container line_height">
@@ -163,7 +161,6 @@ function Pawlert() {
                     className="project_body"
                     initial={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
-                    viewport={{ once:false, amount: 0.3 }}
                     transition={{ type: "tween", stiffness: 150 }}
                 >
                     <div className="body_title main color_text">📁 ../reflection/takeaways</div>
