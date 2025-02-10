@@ -62,7 +62,7 @@ function Pawlert() {
                     style={{ y: 100, opacity: 0 }}
                     transition={{ type: "spring", stiffness: 80 }}
                 >
-                    <img src={pawlert} alt="project thumbnail" />
+                    <img className="img_adjustment" src={pawlert} alt="project thumbnail" />
                 </motion.div>
 
                 {/* intro */}
@@ -75,7 +75,7 @@ function Pawlert() {
                     <div className="title color_blue" >Pawlert.</div>
                     <div className="project_content">
                         <div className="main color_text project_subject">&lt;overview&gt;</div> 
-                        <div className="body project_desc line_height">We built our product as WebApp with Vanila Web Stack through Visual Studio Code. Using the weather API, we generated JSON files for defining the information of users and their dogs. With the JSON data file, we created an AI based assistant application that recommends the best way for users with detailed analysis. <br />
+                        <div className="body project_desc line_height">We built our product as WebApp with Vanila Web Stack through Visual Studio Code. Using the weather API, we generated JSON files for defining the information of users and their dogs. With the JSON data file, we created an AI based assistant application that recommends the best way for users with detailed analysis. <br /><br />
                         Through this project, I experienced the biggest learning curve including learning how GitHub works, or more technical aspects such as exploring JSON files.</div>
                     </div>
                 </motion.div>
@@ -126,7 +126,7 @@ function Pawlert() {
                     <div className="body_title main color_text">📁 ../deliver/final_solution</div>
                 </motion.div>
 
-                <div className="project_deliver" 
+                <div className="project_deliver project_body" 
                     ref={scrollRef}
                     onMouseDown={handleMouseDown}
                     onMouseLeave={handleMouseLeave}
@@ -156,27 +156,6 @@ function Pawlert() {
                     </div>
                 </div>
 
-                {/* reflection */}
-                <motion.div
-                    className="project_body"
-                    initial={{ y: 50, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ type: "tween", stiffness: 150 }}
-                >
-                    <div className="body_title main color_text">📁 ../reflection/takeaways</div>
-                    <div className="body_content body line_height">
-                    This project provided valuable experience and taught me the <b>importance of truly empathizing with users.</b> Previously, I often relied on my own experiences, which led to biases. However, I realized that the real issue was Instagram's accessibility, not users' improper use of ALT text. <br />
-                    <br />
-                    Additionally, I gained a deeper understanding of the <b>significance of feedback</b>, particularly regarding the direct messaging system. It prompted me to consider factors I hadn’t initially thought about, like how the system handles multiple photo selection. This insight played a key role in enhancing the overall quality of the project.<br />
-                    <br />
-                    Lastly, I developed skills in <b>using and connecting various APIs</b>, significantly enhancing my capabilities.
-                    </div>
-
-                    {/* <div className="body_title main color_text">📁 ../reflection/next_steps</div>
-                    <div className="body_content body">
-                    
-                    </div> */}
-                </motion.div>
             </div>
         </div>
     </>

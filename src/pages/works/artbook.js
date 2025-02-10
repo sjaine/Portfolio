@@ -198,11 +198,22 @@ Hand-coded with ❤️ using React & Motion</div>
             >
                 <div className="body_title main color_text">📁 ../reflection/takeaways</div>
                 <div className="body_content body line_height">
-                This project provided valuable experience and taught me the <b>importance of truly empathizing with users.</b> Previously, I often relied on my own experiences, which led to biases. However, I realized that the real issue was Instagram's accessibility, not users' improper use of ALT text. <br />
-                <br />
-                Additionally, I gained a deeper understanding of the <b>significance of feedback</b>, particularly regarding the direct messaging system. It prompted me to consider factors I hadn’t initially thought about, like how the system handles multiple photo selection. This insight played a key role in enhancing the overall quality of the project.<br />
-                <br />
-                Lastly, I developed skills in <b>using and connecting various APIs</b>, significantly enhancing my capabilities.
+                Through these projects, I strengthened my ability to integrate front-end and back-end systems, work with external APIs, and collaborate effectively with UI/UX designer.</div>
+                
+                <div className="reflection body line_height">
+                    <div className="reflection_box">
+                    <b>① Explored REST APIs</b> <br /><br /> I explored APIs extensively, ensuring seamless integration through thorough research, testing, and debugging.
+                    </div>
+                    <div className="reflection_box">
+                    <b>② Developed a full CRUD</b> <br /><br /> By using Node.js, Express, MongoDB, and React, gaining hands-on experience in API development, authentication, and server deployment.
+                    </div>
+                    <div className="reflection_box">
+                    <b>③ Strengthened collaboration skills</b> <br /><br />By working closely with UI/UX designer, ensuring smooth communication and efficient development workflows.
+                    </div>
+                </div>
+
+                <div className="body_content body line_height">
+                These experiences deepened my technical expertise and problem-solving abilities, reinforcing my passion for creating seamless, user-centered web applications. Moving forward, I aim to refine <b>performance optimization, enhance authentication systems, and explore AI-powered solutions.</b>
                 </div>
 
                 {/* <div className="body_title main color_text">📁 ../reflection/next_steps</div>
