@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import * as motion from "motion/react-client"
@@ -28,6 +28,8 @@ const projects = [
 ];
 
 function Archive() {
+    const [selectedImage, setSelectedImage] = useState(null);
+
   return (
     <div className="archive">
         {/* header */}
@@ -63,13 +65,29 @@ Hand-coded with ❤️ using React & Motion</div>
                         layout
                         // Style now supports indepedent transforms:
                         style={{ y: 70, opacity: 0 }}
-                        transition={{ type: "spring", stiffness: 100, delay: index * 0.1 }}   className="archive_image"
+                        transition={{ type: "spring", stiffness: 100, delay: index * 0.1 }}   
+                        onClick={() => setSelectedImage(project.thumbnail)}
+                        className="archive_image"
                     >
                         <img src={project.thumbnail} alt={`${project.title} thumbnail`} />
                     </motion.div >
                 </SwiperSlide>
             ))}
         </Swiper>
+
+        {/* OnClick */}
+        {selectedImage && (
+        <div className="modal" onClick={() => setSelectedImage(null)}>
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.7 }}
+            animate={{ opacity: 1, scale: 0.9 }}
+            transition={{ type: "tween", stiffness: 100 }}
+            className="modal_content"
+          >
+            <img src={selectedImage} alt="Enlarged project" />
+          </motion.div>
+        </div>
+      )}
     </div>
   );
 }
