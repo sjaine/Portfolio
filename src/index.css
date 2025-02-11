@@ -746,8 +746,9 @@ section > div {
 }
 
 .work_thumb {
+  max-height: 500px;
   width: 800px;
-  height: 500px;
+  height: 50%;
   overflow: hidden;
   border-radius: 20px;
   position: relative;
@@ -1236,11 +1237,9 @@ section > div {
   }
 
   .externalNav {
-    transform: scale(0.8);
+    transform: translate(-50%, 0%) scale(0.8);
     gap: 30px;
     bottom: 85px;
-    right: 0;
-    left: auto;
   }
 
   .navBarActive {
@@ -1397,11 +1396,6 @@ section > div {
     bottom: 20px;
     right: 10px;
   }
-
-  .view_case::before {
-    content: "view case study 👆";
-  }
-
   /* project */
   .project_thumbnail {
     height: 23vh;
@@ -1504,10 +1498,55 @@ section > div {
   .status {
     border: 2px solid #D4E32B;
   }
+
+  .view_case::before {
+    content: "view case study 👆";
+  }
+
+}
+
+@media (max-width: 575px) {
+  .view_case {
+    font-size: 60px;
+    padding: 0;
+    bottom: 10px;
+    border: 0;
+  }
+
+  .view_case::before {
+    content: "👆";
+  }
+
+  .view_case:hover {
+    background-color: transparent;
+    border: 0;
+  }
+
+  .work_thumb:hover .view_case {
+    background-color: transparent;
+    border: 0;
+  }
+
+
+  .work_info {
+    bottom: 10px;
+  }
+
+  .work_info > div:last-of-type {
+    display:none;
+  }
 }
 
 /* Mobile screens */
 @media (max-width: 425px) {
+  .externalNav {
+    transform: scale(0.8);
+    gap: 30px;
+    bottom: 85px;
+    right: 0;
+    left: auto;
+  }
+
   .home {
     justify-content: flex-start;
   }
@@ -1572,35 +1611,15 @@ section > div {
     margin-bottom: 30px;
   }
 
-  .work_info {
-    bottom: 10px;
+  /* Archive */
+
+  .archive_image {
+    height: 200px;
   }
 
-  .work_info > div:last-of-type {
-    display:none;
+  .mySwiper {
+    padding: 15px !important;
   }
-
-  .view_case {
-    font-size: 60px;
-    padding: 0;
-    bottom: 10px;
-    border: 0;
-  }
-
-  .view_case::before {
-    content: "👆";
-  }
-
-  .view_case:hover {
-    background-color: transparent;
-    border: 0;
-  }
-
-  .work_thumb:hover .view_case {
-    background-color: transparent;
-    border: 0;
-  }
-
 
   /* Project */
   .overview_container {
