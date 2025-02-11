@@ -1,4 +1,4 @@
-# It's a me, Jaine!
+# Hello, world!
 
 Welcome to my portfolio site, built using React and Motion! <br>
 Feel free to explore and enjoy the experience! 🥰
