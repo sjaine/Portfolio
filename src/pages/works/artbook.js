@@ -257,7 +257,7 @@ Hand-coded with ❤️ using React & Motion</div>
                             modules={[Pagination, Autoplay]} 
                             loop={true}
                             autoplay={{ delay: 3000, disableOnInteraction: false }}
-                            className="deliver_img_pc mySwiper">
+                            className="deliver_img_pc">
                                 <SwiperSlide>
                                     <img src={final5} alt="final 5" className="img_pc" />
                                 </SwiperSlide>
@@ -292,7 +292,7 @@ Hand-coded with ❤️ using React & Motion</div>
                             modules={[Pagination, Autoplay]} 
                             loop={true}
                             autoplay={{ delay: 3000, disableOnInteraction: false }}
-                            className="deliver_img_pc mySwiper">
+                            className="deliver_img_pc">
                                 <SwiperSlide>
                                     <img src={final9} alt="final 9" className="img_pc" />
                                 </SwiperSlide>
@@ -324,7 +324,7 @@ Hand-coded with ❤️ using React & Motion</div>
                             modules={[Pagination, Autoplay]} 
                             loop={true}
                             autoplay={{ delay: 3000, disableOnInteraction: false }}
-                            className="deliver_img_pc mySwiper">
+                            className="deliver_img_pc">
                                 <SwiperSlide>
                                     <img src={final12} alt="final 12" className="img_pc" />
                                 </SwiperSlide>
