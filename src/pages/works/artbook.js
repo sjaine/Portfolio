@@ -218,8 +218,9 @@ Hand-coded with ❤️ using React & Motion</div>
                             pagination={true}
                             modules={[Pagination, Autoplay]} 
                             loop={true}
-                            autoplay={{ delay: 3000, disableOnInteraction: false }}
-                            className="deliver_img_pc mySwiper">
+                            autoplay={{ disableOnInteraction: false }}
+                            slidesPerView= {1}
+                            className="deliver_img_pc">
                                 <SwiperSlide>
                                     <img src={final1} alt="final 1" className="img_pc" />
                                 </SwiperSlide>

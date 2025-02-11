@@ -1077,12 +1077,13 @@ section > div {
 }
 
 .deliver_img_pc {
-  height: 500px;
   width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
 }
 
 .img_pc {
-  border-radius: 10px;
+  object-fit: cover;
 } 
 
 .project_body:last-of-type {
@@ -1241,6 +1242,16 @@ section > div {
 
   .project_deliver {
     padding: 0;
+  }
+}
+
+@media (max-width: 1441px) {
+  .project_content {
+    width: 65%;
+  }
+
+  .project_body {
+    padding: 0 280px;
   }
 }
 
@@ -1591,7 +1602,6 @@ section > div {
   /* About */
   .about_profileImg {
     border-radius: 20px;
-    width: 65%;
   }
 
   .about_container {
@@ -1673,6 +1683,10 @@ section > div {
 
   .reflection_box {
     width: 100%;
+  }
+
+  .box_pc {
+    gap: 10px;
   }
 }
 
