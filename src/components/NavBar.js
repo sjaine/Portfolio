@@ -95,7 +95,7 @@ function NavBar() {
           <div className={`contactInfo main color_text ${
               isContactClicked ? "contactInfoActive" : ""
             }`}>
-            <a href="/" target="_blank" rel="noopener noreferrer"><div>[01] Resume</div><img src={arrow} alt="arrow" /></a>
+            <a href="https://www.dropbox.com/scl/fi/pjjg7xl5b1v0aas7zb70w/Resume.pdf?rlkey=cgemzwnkw43h5m5m00my9752h&st=lf71x727&dl=0" target="_blank" rel="noopener noreferrer"><div>[01] Resume</div><img src={arrow} alt="arrow" /></a>
             <a href="https://www.linkedin.com/in/jaineysshin/" target="_blank" rel="noopener noreferrer"><div>[02] LinkedIn</div><img src={arrow} alt="arrow" /></a>
             <a href="https://github.com/sjaine" target="_blank" rel="noopener noreferrer"><div>[03] GitHub</div><img src={arrow} alt="arrow" /></a>
           </div>

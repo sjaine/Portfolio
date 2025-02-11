@@ -1214,6 +1214,7 @@ section > div {
   }
 
   .about_profileImg {
+    width: 320px;
     height: 500px;
   }
 
