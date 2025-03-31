@@ -17,18 +17,21 @@ import book from '../assets/img/book.png';
 import movieposter from '../assets/img/movieposter.png';
 import movieticket from '../assets/img/movieticket.png';
 import watering from '../assets/img/watering.png';
+import filmsclothing from '../assets/img/filmclothing.gif';
 
 const projects = [
-  { id: 1, title: 'arbor day', thumbnail: arborday },
-  { id: 2, title: 'movie ticket', thumbnail: movieticket },
-  { id: 3, title: 'planting app', thumbnail: watering },
-  { id: 4, title: 'book redesign', thumbnail: book },
-  { id: 5, title: 'movie night', thumbnail: movienight },
-  { id: 6, title: 'movie poster', thumbnail: movieposter }
+  { id: 1, title: 'filmsclothing.one', thumbnail: filmsclothing },
+  { id: 2, title: 'Arbor day', thumbnail: arborday },
+  { id: 3, title: 'Movie ticket', thumbnail: movieticket },
+  { id: 4, title: 'Planting app', thumbnail: watering },
+  { id: 5, title: 'Book redesign', thumbnail: book },
+  { id: 6, title: 'Movie night', thumbnail: movienight },
+  { id: 7, title: 'Movie poster', thumbnail: movieposter }
 ];
 
 function Archive() {
     const [selectedImage, setSelectedImage] = useState(null);
+    const [selectedImageTitle, setSelectedImageTitle] = useState(null);
 
   return (
     <div className="archive">
@@ -66,7 +69,14 @@ Hand-coded with ❤️ using React & Motion</div>
                         // Style now supports indepedent transforms:
                         style={{ y: 70, opacity: 0 }}
                         transition={{ type: "spring", stiffness: 100, delay: index * 0.1 }}   
-                        onClick={() => setSelectedImage(project.thumbnail)}
+                        onClick={() => {
+                          if (project.id === 1) {
+                            window.open('https://filmclothing.vercel.app/', '_blank');
+                          } else {
+                            setSelectedImage(project.thumbnail);
+                            setSelectedImageTitle(project.title);
+                          }
+                        }}
                         className="archive_image"
                     >
                         <img src={project.thumbnail} alt={`${project.title} thumbnail`} />
@@ -77,13 +87,14 @@ Hand-coded with ❤️ using React & Motion</div>
 
         {/* OnClick */}
         {selectedImage && (
-        <div className="modal" onClick={() => setSelectedImage(null)}>
+        <div className="modal" onClick={() => {setSelectedImage(null); setSelectedImageTitle(null);}}>
           <motion.div 
             initial={{ opacity: 0, scale: 0.7 }}
             animate={{ opacity: 1, scale: 0.9 }}
             transition={{ type: "tween", stiffness: 100 }}
             className="modal_content"
           >
+            <p className="archive_title main">{selectedImageTitle}</p>
             <img src={selectedImage} alt="Enlarged project" />
           </motion.div>
         </div>
