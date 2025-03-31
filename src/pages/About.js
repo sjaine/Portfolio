@@ -123,7 +123,7 @@ function About() {
                         </tr>
                         <tr className="about_table_2">
                             <td><b>[DEVELOPMENT]</b></td>
-                            <td>HTML, CSS, JavaScript, React.js, Node.js, REST APIs, GitHub, MySQL, MongoDB, System Thinking</td>
+                            <td>HTML, CSS, JavaScript, React.js, Next.js, Node.js, REST APIs, GitHub, MySQL, MongoDB, Tailwind CSS</td>
                         </tr>
                     </table>
                 </motion.div >
